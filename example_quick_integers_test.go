@@ -3,7 +3,7 @@ package quickselect_test
 import (
 	"fmt"
 
-	"github.com/wangjohn/quickselect"
+	"github.com/cdn77/quickselect"
 )
 
 func Example_intQuickSelect() {
