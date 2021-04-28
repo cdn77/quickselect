@@ -247,6 +247,16 @@ func bench(b *testing.B, size, k int, quickselect bool) {
 }
 
 // Benchmarks for QuickSelect
+func BenchmarkQuickSelectSize64K1(b *testing.B) { bench(b, 64, 1, true) }
+func BenchmarkQuickSelectSize64K2(b *testing.B) { bench(b, 64, 2, true) }
+func BenchmarkQuickSelectSize64K3(b *testing.B) { bench(b, 64, 3, true) }
+func BenchmarkQuickSelectSize64K4(b *testing.B) { bench(b, 64, 4, true) }
+
+func BenchmarkSortSelectSize64K1(b *testing.B) { bench(b, 64, 1, false) }
+func BenchmarkSortSelectSize64K2(b *testing.B) { bench(b, 64, 2, false) }
+func BenchmarkSortSelectSize64K3(b *testing.B) { bench(b, 64, 3, false) }
+func BenchmarkSortSelectSize64K4(b *testing.B) { bench(b, 64, 4, false) }
+
 func BenchmarkQuickSelectSize1e2K1e1(b *testing.B) { bench(b, 1e2, 1e1, true) }
 
 func BenchmarkQuickSelectSize1e3K1e1(b *testing.B) { bench(b, 1e3, 1e1, true) }
